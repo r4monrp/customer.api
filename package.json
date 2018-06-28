@@ -1,0 +1,29 @@
+{
+  "name": "customer.api",
+  "version": "1.0.0",
+  "description": "WEB API NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r4monrp/NodeJS.git"
+  },
+  "author": "Ramon Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r4monrp/NodeJS/issues"
+  },
+  "homepage": "https://github.com/r4monrp/NodeJS#readme",
+  "dependencies": {
+    "aws-sdk": "^2.265.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.17.5"
+  }
+}
