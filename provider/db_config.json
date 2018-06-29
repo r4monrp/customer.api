@@ -1,7 +1,0 @@
-{
-    "region": "us-east-1",
-    "enpoint" :"https://dynamodb.us-east-1.amazonaws.com",
-    "tableName" : "customers",
-    "accessKeyId": "",
-    "secretAccessKey": ""
-  }
