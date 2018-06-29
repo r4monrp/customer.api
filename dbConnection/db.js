@@ -8,7 +8,7 @@ AWS.config.update({
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();
-
+console.log(docClient);
 module.exports = docClient;
 
 
