@@ -1,9 +1,21 @@
 var customerDB = require('../provider/customerDB');
 
-module.exports = {
-	getAll: function () {
-        var customers = customerDB.getAll();
-        console.log(customers);
-        return customers;
+function getAll(){
+        return new Promise((resolve, reject) => {
+                request.get(options, (err, resp, body) => {
+                    if (err) {
+                        console.log(err);
+                        reject(err);
+                    } else {
+                        var customers = customerDB.getAll();
+                        console.log(customers);
+                        resolve(customers);
+                    }
+                })
+            })
 	}
+
+module.exports = {
+	getAll   
   };
+  

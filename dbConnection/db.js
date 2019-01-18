@@ -1,14 +1,19 @@
-var AWS = require('aws-sdk');
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize(process.env.DATABASE, process.env.USER, process.env.PASSWORD, {
+  host: 'localhost',
+  dialect: 'mysql',
 
-AWS.config.update({
-	region : process.env.REGION,
-	endpoint : process.env.ENDPOINT,
-	accessKeyId : process.env.ACCESSKEYID,
-	secretAccessKey : process.env.SECRETACCESSKEY
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  },
+
+  operatorsAliases: false
 });
 
-var docClient = new AWS.DynamoDB.DocumentClient();
-console.log(docClient);
-module.exports = docClient;
 
-
+module.exports = {
+	sequelize   
+  };
